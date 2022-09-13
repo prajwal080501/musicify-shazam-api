@@ -16,8 +16,8 @@ const [query, setQuery] = useState("");
     url: 'https://shazam.p.rapidapi.com/search',
     params: {term: query, locale: 'en-US', offset: '0', limit: '5'},
     headers: {
-      'X-RapidAPI-Key': 'b4c218f272msh21bfa859ca66f2fp14a119jsn868c6b2145de',
-      'X-RapidAPI-Host': 'shazam.p.rapidapi.com'
+      'X-RapidAPI-Key':process.env.RapidAPIKey,
+      'X-RapidAPI-Host': process.env.RapidAPIHost,
     }
   };
 
@@ -46,7 +46,7 @@ const [query, setQuery] = useState("");
           <input type="submit" onClick={searchSong} className="bg-gray-100 duration-300 ease rounded-r-md hover:bg-gray-700 hover:text-white text-black font-medium p-3 shadow-lg"/>
         </form>
       </div>
-      <SearchContainer songs={songList}/>
+      <SearchContainer query={query} songs={songList}/>
     </div>
   )
 }
