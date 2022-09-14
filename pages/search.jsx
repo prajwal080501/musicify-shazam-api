@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import SearchContainer from '../components/Searchcontainer/SearchContainer';
 import Sidebar from '../components/Sidebar/Sidebar'
 import SongContainer from '../components/Songcontainer/SongContainer';
-
+import Link from 'next/link';
 const search = ({ isOpen, setIsOpen, handleOpen }) => {
 const [songList, setSongList] = useState([]);
 const [query, setQuery] = useState("");
@@ -16,8 +16,8 @@ const [query, setQuery] = useState("");
     url: 'https://shazam.p.rapidapi.com/search',
     params: {term: query, locale: 'en-US', offset: '0', limit: '5'},
     headers: {
-      'X-RapidAPI-Key':process.env.RapidAPIKey,
-      'X-RapidAPI-Host': process.env.RapidAPIHost,
+      'X-RapidAPI-Key':'b4c218f272msh21bfa859ca66f2fp14a119jsn868c6b2145de',
+      'X-RapidAPI-Host': 'shazam.p.rapidapi.com',
     }
   };
 
@@ -37,8 +37,10 @@ const [query, setQuery] = useState("");
           <svg onClick={handleOpen} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 text-white hover:scale-105 active:scale-95 duration-200 ease cursor-pointer h-full pt-4 ml-4 ">
             <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
           </svg>
-
-          <p className='text-3xl pl-5 text-white font-bold pt-4'>Musicify</p>
+          <Link href="/">
+          <p className='text-3xl cursor-pointer pl-5 text-white font-bold pt-4'>Musicify</p>
+          </Link>
+          
           <Sidebar isOpen={isOpen} handleOpen={handleOpen} setIsOpen={setIsOpen} />
         </div>
         <form onSubmit={onSubmit} className="w-screen h-full flex items-center justify-center">

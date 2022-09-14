@@ -15,8 +15,8 @@ export default function Home({ isOpen, setIsOpen, handleOpen }) {
     url: 'https://shazam.p.rapidapi.com/songs/list-recommendations',
     params: {key: '484129036', locale: 'en-US'},
     headers: {
-      'X-RapidAPI-Key': process.env.RapidAPIKey,
-      'X-RapidAPI-Host': process.env.RapidAPIHost,
+      'X-RapidAPI-Key':'b4c218f272msh21bfa859ca66f2fp14a119jsn868c6b2145de',
+      'X-RapidAPI-Host': 'shazam.p.rapidapi.com',
     }
   };
 

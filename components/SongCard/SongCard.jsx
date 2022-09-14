@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 const SongCard = ({ title, image }) => {
     return (
-        <div className="w-fit h-fit hover:opacity-70 pb-3 ml-6 mb-8 shadow-md rounded-md hover:scale-105 ease duration-150 cursor-pointer bg-white">
+        <div className="w-fit h-fit hover:opacity-70 pb-3 ml-6 mb-8 shadow-md rounded-md hover:-translate-y-5 ease duration-200 cursor-pointer bg-white">
             <img src={`${image["coverart"]}`} className="rounded-md mx-auto" objectFit='contain' />
             <div className=" pl-2 pt-3 flex justify-between items-center">
                 <p className='font-bold text-base'>{title}</p>
