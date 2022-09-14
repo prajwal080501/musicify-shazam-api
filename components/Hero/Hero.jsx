@@ -11,7 +11,7 @@ const Hero = ({ isOpen, setIsOpen, handleOpen }) => {
 
             <div className='w-screen bg-red-400 h-[100vh] top-1/2 flex flex-col justify-items-center'>
                 <div className='relative h-full w-full'>
-                <Image src={bg} layout="fill" className=' blur-sm' objectFit='cover'/>
+                <Image src={bg} layout="fill" className='' objectFit='cover'/>
                 </div>
                 <div className="flex absolute top-0 items-center justify-items-center">
                     <svg onClick={handleOpen} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 text-white hover:scale-105 active:scale-95 duration-200 ease cursor-pointer h-full pt-4 ml-4 ">
