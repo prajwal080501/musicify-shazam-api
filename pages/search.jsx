@@ -4,7 +4,7 @@ import SearchContainer from '../components/Searchcontainer/SearchContainer';
 import Sidebar from '../components/Sidebar/Sidebar'
 import SongContainer from '../components/Songcontainer/SongContainer';
 import Link from 'next/link';
-const search = ({ isOpen, setIsOpen, handleOpen }) => {
+const Search = ({ isOpen, setIsOpen, handleOpen }) => {
 const [songList, setSongList] = useState([]);
 const [query, setQuery] = useState("");
   function onSubmit(e) {
@@ -53,4 +53,4 @@ const [query, setQuery] = useState("");
   )
 }
 
-export default search
+export default Search
