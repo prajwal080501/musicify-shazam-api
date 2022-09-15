@@ -7,7 +7,7 @@ const ChartContainer = ({ charts }) => {
       <div className='grid  grid-cols-2  mb-3 place-items-center h-fit md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5'>
         {charts.map(chart => (
           
-          <div key={chart.name} className=' even:bg-green-500 rounded-lg shadow-m hover:opacity-75 hover:scale-105 duration-300 cursor-pointer ease odd:bg-gradient-to-b from-indigo-500 via-purple-600 to-pink-400   text-white mb-3 p-4 w-60 h-56'>
+          <div key={chart.name} className=' even:bg-green-500 rounded-lg shadow-m hover:opacity-75 hover:scale-105 duration-300 cursor-pointer ease odd:bg-gradient-to-b from-indigo-500 via-purple-600 to-pink-400   text-white mb-3 p-4 w-40 h-56 md:w-60 md:h-56'>
             <p className="pl-1 pr-3 text-2xl font-bold pt-3">{chart.name}</p>
           </div>
         ))}
