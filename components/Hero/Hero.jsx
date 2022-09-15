@@ -11,7 +11,7 @@ const Hero = ({ isOpen, setIsOpen, handleOpen }) => {
 
             <div className='w-screen bg-red-400 h-[100vh] top-1/2 flex flex-col justify-items-center'>
                 <div className='relative h-full w-full'>
-                <Image src={bg} layout="fill" className='' objectFit='cover'/>
+                <Image src={bg} layout="fill" className=' acc' objectFit='cover'/>
                 </div>
                 <div className="flex absolute top-0 items-center justify-items-center">
                     <svg onClick={handleOpen} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 text-white hover:scale-105 active:scale-95 duration-200 ease cursor-pointer h-full pt-4 ml-4 ">
@@ -24,7 +24,7 @@ const Hero = ({ isOpen, setIsOpen, handleOpen }) => {
                 <div className="flex flex-col absolute top-1/2 h-fit w-screen items-center justify-center">
                     <h2 className='  animate-pulse text-center font-bold text-white text-5xl'>Music wherever you go.</h2>
                     <Link href="/search">
-                    <button className='bg-white w-fit font-medium p-2 text-lg rounded-md shadow-md mx-auto mt-5 text-center hover:bg-gray-200 hover:duration-200 ease hover:scale-105 active:scale-95'>Explore Songs</button>
+                    <button className='bg-white w-fit font-medium p-3 text-normal rounded-md shadow-md mx-auto mt-5 text-center hover:bg-gray-200 hover:duration-200 active:bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 duration-300 active:text-white ease hover:scale-105 active:scale-95'>Explore Songs</button>
                     </Link>
                 </div>
             </div>

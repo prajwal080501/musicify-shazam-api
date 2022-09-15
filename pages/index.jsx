@@ -6,8 +6,10 @@ import axios from "axios"
 import Hero from '../components/Hero/Hero'
 import { useEffect, useState } from 'react'
 import SongContainer from '../components/Songcontainer/SongContainer'
+import Chart from '../components/Chart/Chart'
 export default function Home({ isOpen, setIsOpen, handleOpen }) {
   const [songs, setSongs] = useState([]);
+
 
 
   const options = {
@@ -36,8 +38,9 @@ export default function Home({ isOpen, setIsOpen, handleOpen }) {
   }, [])
 
   return (
-    <div className='h-full w-screen bg-white'>
+    <div className='font-sans h-full w-screen bg-white'>
       <Hero isOpen={isOpen} handleOpen={handleOpen} setIsOpen={setIsOpen} />
+      
       <SongContainer songs={songs} />
     </div>
   )

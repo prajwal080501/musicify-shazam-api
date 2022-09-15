@@ -4,6 +4,7 @@ import SearchContainer from '../components/Searchcontainer/SearchContainer';
 import Sidebar from '../components/Sidebar/Sidebar'
 import SongContainer from '../components/Songcontainer/SongContainer';
 import Link from 'next/link';
+import Chart from '../components/Chart/Chart';
 const Search = ({ isOpen, setIsOpen, handleOpen }) => {
 const [songList, setSongList] = useState([]);
 const [query, setQuery] = useState("");
@@ -49,6 +50,7 @@ const [query, setQuery] = useState("");
         </form>
       </div>
       <SearchContainer query={query} songs={songList}/>
+      <Chart className={songList.length > 0 ? "hidden" : "visible"}/>
     </div>
   )
 }

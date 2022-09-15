@@ -28,6 +28,10 @@ const Sidebar = ({ isOpen, setIsOpen, handleOpen }) => {
                 </Link>
                 
             </div>
+
+            <div className='absolute bottom-0 text-center w-full font-bold text-sm'>
+                <p>Musicify 2022 Ⓒ </p>
+            </div>
         </div>
     )
 }
